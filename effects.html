@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+    <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="favicon.svg">
+   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="theme-color" content="#111111">
+   <title>Последствия отказа</title>
+   <link rel="preload" href="fonts/Gerbera-Light.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="css/main.css">
+   <script defer src="js/main.js"></script>
+
+</head>
+
+    <body class="page__body">
+        <div class="site-container">
+            <header id='header' class="header">
+  <div class="container header__container">
+    <a href="index.html" class="logo">
+      <img src="./img/svg/logo.svg" class="img-contain" width="224" height="58" alt="logo">
+    </a>
+    <nav class="nav">
+      <ul class="list-reset nav__list">
+        <li class="nav__item">
+          <a href="index.html#advantages" class="nav__link link">Преимущества</a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#history" class="nav__link link">О нас</a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#contact" class="nav__link link">Связаться с нами</a>
+        </li>
+      </ul>
+    </nav>
+    <a href='index.html#header' class="btn-reset btn__start">
+      <div class="btn__block">
+        <div class="btn__back"></div>
+        <div class="btn__circle">
+          <div class="btn__img">
+            <img src="./img/svg/arrowTop.svg" class="img-contain" width="17" height="14" alt="arrowTop">
+          </div>
+        </div>
+      </div>
+      <span class="btn__text">В начало</span>
+    </a>
+  </div>
+</header>
+
+            <main class="main">
+                <section class="block">
+                    <div class="container block__container">
+                        <div class="block__left">
+                            <h1 class="block__title">Что будет, если отказаться от договора страхования</h1>
+                            <ul class=" block__list">
+                                <li class="block__item">При отказе от договора страхования Вашим кредитным договором предусмотрено увеличение процентной ставки при неисполнении обязательств по страхованию</li>
+                                <li class="block__item">Повышение вероятности отзыва кредита</li>
+                                <li class="block__item">В крайних случаях оплата кредита переходит на родственников</li>
+                                <li class="block__item">Изменение лояльности банка</li>
+                            </ul>
+                            <div class="block__btns">
+                                <button data-popupId='popup' class="btn-reset btn-white block__btn popup__link"><span>Отказаться</span></button>
+                                <a href='acceptance.html' class="btn-reset btn-green block__btn"><span>Хочу оставить программу</span></a>
+                            </div>
+                        </div>
+                        <div class="block__right">
+                            <picture>
+                                <source srcset="./img/mans.webp" type="image/webp">
+                                <img loading="lazy" src="./img/mans.jpg" class="img-cover" width="768" height="720" alt="mans">
+                            </picture>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+  <div class="container footer__container">
+    <a href="index.html" class="logo">
+      <img src="./img/svg/logo.svg" class="img-contain" width="224" height="58" alt="logo">
+    </a>
+    <span class="footer__description">© 2024 Все права защищены.</span>
+    <span class="footer__link">Горячая линия: <a class='link' href="tel:8 (800) 333-2-981 ">8 (800) 333-2-981 </a></span>
+  </div>
+</footer>
+
+            <div id='popup' class="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <button class="btn-reset close__btn">
+                            <div class="btn__block">
+                                <div class="btn__back"></div>
+                                <div class="btn__circle">
+                                    <div class="btn__img">
+                                        <img src="./img/svg/close.svg" class="img-contain" width="17" height="14" alt="arrowTop">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <form class="form">
+                            <div class="form__item">
+                                <span class="form__label">Номер полиса</span>
+                                <input id='inputPolis' type="text" class="input">
+                                <span class="form__error">Пожалуйста, заполните это поле.</span>
+                            </div>
+                            <div class="form__item">
+                                <span class="form__label">Дата оформления</span>
+                                <input data-format="00.00.0000" id='inputDate' type="text" class="input" placeholder='ДД. ММ.ГГГГ'>
+                                <span class="form__error">Пожалуйста, заполните это поле.</span>
+                            </div>
+                            <button type='button' class="btn-reset btn-green form__btn"><span>Отказаться</span></button>
+                            <p class="form__description">Проверьте корректность введенного полиса или обратитесь на горячую линию <a href="tel:8 (800) 333-2-981">8 (800) 333-2-981</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
