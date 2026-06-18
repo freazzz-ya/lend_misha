@@ -1,0 +1,7 @@
+services:
+  lend-misha:
+    build: .
+    container_name: lend-misha
+    restart: unless-stopped
+    ports:
+      - "80:80"
