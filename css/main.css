@@ -1304,8 +1304,8 @@ picture {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
   gap: 31px;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -1368,6 +1368,10 @@ picture {
     flex: 1 1 0;
     max-width: 100%;
     font-size: 16px;
+  }
+  .advantages__description {
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 @media screen and (max-width: 978px) {
