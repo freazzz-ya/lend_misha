@@ -213,7 +213,7 @@ const inputDate = document?.getElementById("inputDate");
 const inputPolis = document?.getElementById("inputPolis");
 inputPolis?.addEventListener("input", restrictToInteger);
 function restrictToInteger() {
-  this.value = this.value.replace(/[^\d.]/g, "").slice(0, 11);
+  this.value = this.value.replace(/[^\d]/g, "").slice(0, 10);
 }
 new air_datepicker__WEBPACK_IMPORTED_MODULE_0__["default"](inputDate, {
   maxDate: new Date()
@@ -225,7 +225,7 @@ formBtn?.addEventListener("click", e => {
   if (!ValidateEmpty(inputPolis.value)) {
     inputPolis.nextElementSibling.classList.remove("_visible");
     formBtn.nextElementSibling.classList.remove("_visible");
-    if (ValidateLength(10, inputPolis.value)) {
+    if (ValidatePolis(inputPolis.value)) {
       inputPolis.nextElementSibling.classList.remove("_visible");
       formBtn.nextElementSibling.classList.remove("_visible");
       errors[0] = false;
@@ -263,7 +263,7 @@ formBtn?.addEventListener("click", e => {
     errors[1] = true;
   }
   if (!errors[0] && !errors[1]) {
-    if (daysAll < 30 && inputPolis.value.startsWith("10")) {
+    if (daysAll < 30 && inputPolis.value.startsWith("56")) {
       window.location.href = "consequences.html";
     } else {
       window.location.href = "acceptanceRepeat.html";
@@ -275,6 +275,9 @@ function ValidateEmpty(value) {
 }
 function ValidateLength(length, value) {
   return value.length >= length ? true : false;
+}
+function ValidatePolis(value) {
+  return /^56\d{8}$/.test(value);
 }
 let daysAll;
 function ValidateDate(dateString) {
